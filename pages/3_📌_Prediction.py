@@ -6,6 +6,8 @@ import yfinance as yf
 from pandas_datareader.data import DataReader
 import yfinance as yf
 from pandas_datareader import data as pdr
+from keras.models import Sequential
+from keras.layers import Dense, LSTM
 yf.pdr_override()
 
 from datetime import datetime
@@ -70,8 +72,7 @@ x_train, y_train = np.array(x_train), np.array(y_train)
 x_train = np.reshape(x_train, (x_train.shape[0], x_train.shape[1], 1))
 # x_train.shape
 
-from keras.models import Sequential
-from keras.layers import Dense, LSTM
+
 
 # Build the LSTM model
 model = Sequential()
