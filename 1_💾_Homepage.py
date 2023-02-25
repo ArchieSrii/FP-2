@@ -21,6 +21,9 @@ st.title('Stock Forecasting')
 # setting up structure to retrive data
 ticker=""
 ticker = st.sidebar.text_input('Ticker')
+b=1
+b
+ticker
 comp_list = []  # Create an empty list for the companies
 comp_list.append(ticker)
 
@@ -28,6 +31,9 @@ comp_list.append(ticker)
 # stock_name2 = 'DJIA'
 stock_name2=""
 stock_name2 = st.sidebar.text_input('Ticker2')
+a=2
+a
+stock_name2
 comp_list.append(stock_name2) 
 #aded for checking
 #comp_list
