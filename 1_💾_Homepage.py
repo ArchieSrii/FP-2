@@ -29,7 +29,7 @@ comp_list.append(stock_name2)
 
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
-
+print(comp_list)
 if ticker and stock_name2 is not None:
     # Extracting data
     end = datetime.now()
@@ -41,7 +41,7 @@ if ticker and stock_name2 is not None:
     company_list = [eval(x) for x in comp_list]
     company_name = comp_list
     #["Company1", "DJIA"]
-    print(company_name)
+    
 
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
