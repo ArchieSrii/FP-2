@@ -68,11 +68,13 @@ if ticker and stock_name2 is not None:
     #daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
     #daf
         
-    company_list = [eval(x) for x in ['AAPL','DJIA']]
+    #company_list = [eval(x) for x in ['AAPL','DJIA']]
+    company_list = [eval(x) for x in comp_list]
     company_name = comp_list
-    f=6
-    f
-    company_name
+    #company_name = comp_list
+    #f=6
+    #f
+    #company_name
     #["Company1", "DJIA"]
     
 
