@@ -15,6 +15,8 @@ yf.pdr_override()
 sidebar_flag = None
 sidebar_flag2 = None 
 # Page title and config
+st. set_page_config(layout="wide")
+
 st.set_page_config(
     page_title='Stock Forecasting'
 )
