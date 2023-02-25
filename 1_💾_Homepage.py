@@ -49,6 +49,10 @@ comp_list
 
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
+daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
+j=10
+j
+daf
 if ticker and stock_name2 is not None:
     # Extracting data
     end = '2023-02-24'
