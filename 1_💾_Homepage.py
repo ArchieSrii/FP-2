@@ -51,8 +51,9 @@ sidebar_flag = ticker
 sidebar_flag2  = stock_name2
 if ticker and stock_name2 is not None:
     # Extracting data
-    end = datetime.now()
-    start = datetime(end.year - 1, end.month, end.day)
+    end = '2023-02-24'
+    #start = datetime(end.year - 1, end.month, end.day)
+    start= '2022-02-24'
     #comp_list= ['AAPL','DJIA']
     for stock in comp_list:
     #    d=3
