@@ -25,7 +25,7 @@ comp_list = []  # Create an empty list for the companies
 a=1
 comp_list
 comp_list.append(ticker)
-comp_list=list(comp_list.keys())
+
 
 a=1
 a
@@ -52,14 +52,16 @@ if ticker and stock_name2 is not None:
     # Extracting data
     end = datetime.now()
     start = datetime(end.year - 1, end.month, end.day)
-
+    comp_list= ['AAPL','DJIA']
     for stock in comp_list:
         d=3
         d
         stock
         globals()[stock] = yf.download(stock, start, end)
+    g=7
+    g
+    stock
     
-    comp_list1= ['AAPL','DJIA']
     company_list = [eval(x) for x in comp_list1]
     e=5
     e
