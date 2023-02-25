@@ -60,6 +60,8 @@ if ticker and stock_name2 is not None:
     #    stock
     #    globals()[stock] = yf.download(stock, start, end)
     globals()['AAPL'] = yf.download('AAPL', start, end)
+    daf= globals()['AAPL'] = yf.download('AAPL', start, end)
+    daf
         
     company_list = [eval(x) for x in ['AAPL','DJIA']]
     e=5
