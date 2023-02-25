@@ -1,4 +1,5 @@
 #importing libraries
+!pip install --upgrade pip
 import streamlit as st
 from datetime import datetime
 import matplotlib.pyplot as plt
