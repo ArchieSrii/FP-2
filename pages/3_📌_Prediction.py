@@ -28,15 +28,17 @@ start_date = yf.Ticker(ticker).history(period="max").index[0]
 
 # Get the stock quote
 df = pdr.get_data_yahoo(ticker, start = '2012-01-01', end=datetime.now())
+set_page_config(layout="wide")
 st.write(df.tail()) 
 
 def plot_ticker():
     plt.figure(figsize=(16,6))
+    set_page_config(layout="wide")
     fig = go.Figure()
     fig.add_trace(go.Scatter(x = df.index,y = df['Close'],name = f'{ticker} Close'))
     fig.layout.update(title_text = f'{ticker} Historical Close',xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
-plt.figure(figsize=(16,6))    
+ 
 plot_ticker() 
 
 # Create a new dataframe with only the 'Close column 
