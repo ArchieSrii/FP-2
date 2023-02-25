@@ -63,7 +63,7 @@ if ticker and stock_name2 is not None:
     #globals()['AAPL'] = yf.download('AAPL', start, end)
     #daf= globals()['AAPL'] = yf.download('AAPL', start, end)
     #daf
-    daf=yf.Ticker("AAPL").history(period='1d,start=start, end=end)
+    daf=yf.Ticker("AAPL").history(period='1d',start=start, end=end)
     daf
         
     company_list = [eval(x) for x in ['AAPL','DJIA']]
