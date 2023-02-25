@@ -33,7 +33,6 @@ st.write(df.tail())
 def plot_ticker():
     plt.figure(figsize=(16,6))
     fig = go.Figure()
-    plt.figure(figsize=(16,6))
     fig.add_trace(go.Scatter(x = df.index,y = df['Close'],name = f'{ticker} Close'))
     fig.layout.update(title_text = f'{ticker} Historical Close',xaxis_rangeslider_visible=True)
     st.plotly_chart(fig)
