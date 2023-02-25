@@ -26,10 +26,11 @@ comp_list.append(ticker)
 # stock_name2 = 'DJIA'
 stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list.append(stock_name2) 
-
+#aded for checking
+comp_list
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
-print(comp_list)
+
 if ticker and stock_name2 is not None:
     # Extracting data
     end = datetime.now()
@@ -46,7 +47,8 @@ if ticker and stock_name2 is not None:
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
     df = pd.concat(company_list, axis=0) 
-    print(df)
+    #checking df
+    df
     df=df.reset_index()
     df["Date"] = pd.to_datetime(df["Date"], format='%Y-%m-%d').dt.date
     st.dataframe(df[df['company_name'] == ticker].tail(10))  
