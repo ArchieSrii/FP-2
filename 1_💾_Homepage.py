@@ -27,10 +27,11 @@ comp_list.append(ticker)
 stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list.append(stock_name2) 
 #aded for checking
-comp_list
+#comp_list
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
-
+ticker
+stock_name2
 if ticker and stock_name2 is not None:
     # Extracting data
     end = datetime.now()
