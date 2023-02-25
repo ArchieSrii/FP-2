@@ -41,10 +41,12 @@ if ticker and stock_name2 is not None:
     company_list = [eval(x) for x in comp_list]
     company_name = comp_list
     #["Company1", "DJIA"]
+    print(company_name)
 
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
     df = pd.concat(company_list, axis=0) 
+    print(df)
     df=df.reset_index()
     df["Date"] = pd.to_datetime(df["Date"], format='%Y-%m-%d').dt.date
     st.dataframe(df[df['company_name'] == ticker].tail(10))  
