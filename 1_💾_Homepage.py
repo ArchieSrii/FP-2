@@ -20,7 +20,7 @@ st.set_page_config(
 st.title('Stock Forecasting')
 # setting up structure to retrive data
 ticker=""
-ticker = st.sidebar.text_input('Ticker')
+ticker = st.sidebar.text_input(st.session_state['Ticker'])
 comp_list = []  # Create an empty list for the companies
 a=1
 comp_list
@@ -34,7 +34,7 @@ comp_list
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
 stock_name2=""
-stock_name2 = st.sidebar.text_input('Ticker2')
+stock_name2 = st.sidebar.text_input(st.session_state['Ticker2'])
 comp_list.append(stock_name2) 
 
 b=2
@@ -53,7 +53,7 @@ if ticker and stock_name2 is not None:
     end = datetime.now()
     start = datetime(end.year - 1, end.month, end.day)
     #comp_list= ['AAPL','DJIA']
-    #for stock in ['AAPL','DJIA']:
+    for stock in comp_list:
     #    d=3
     #    d
     #    stock
