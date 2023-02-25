@@ -59,7 +59,13 @@ if ticker and stock_name2 is not None:
         globals()[stock] = yf.download(stock, start, end)
         
     company_list = [eval(x) for x in comp_list]
+    e=5
+    e
+    company_list
     company_name = comp_list
+    f=6
+    f
+    company_name
     #["Company1", "DJIA"]
     
 
