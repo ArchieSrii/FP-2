@@ -39,7 +39,7 @@ comp_list1.append(stock_name2)
 #comp_list = [eval(x) for x in comp_list1]
 c=3
 c
-comp_list
+#comp_list
 
 #aded for checking
 #comp_list
