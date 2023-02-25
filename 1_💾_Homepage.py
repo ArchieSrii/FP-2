@@ -25,7 +25,7 @@ ticker = st.sidebar.text_input('Ticker')
 comp_list = []  # Create an empty list for the companies
 #a=1
 #comp_list
-#comp_list.append(ticker)
+comp_list.append(ticker)
 
 
 #a=1
