@@ -42,12 +42,6 @@ comp_list1
 #aded for checking
 #comp_list
 
-my_list = zip(comp_list1.values())
-#my_list = list(comp_list1.values())
-my_list =list(my_list)
-d=4
-d
-my_list
 
 
 
@@ -59,6 +53,9 @@ if ticker and stock_name2 is not None:
     start = datetime(end.year - 1, end.month, end.day)
 
     for stock in comp_list:
+        d=3
+        d
+        stock
         globals()[stock] = yf.download(stock, start, end)
         
     company_list = [eval(x) for x in comp_list]
