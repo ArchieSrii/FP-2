@@ -42,11 +42,15 @@ comp_list1
 #aded for checking
 #comp_list
 
-
-my_list = list(comp_list1.values())
+my_list = zip(comp_list1.values())
+#my_list = list(comp_list1.values())
+my_list =list(my_list)
 d=4
 d
 my_list
+
+
+
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
 if ticker and stock_name2 is not None:
