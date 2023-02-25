@@ -53,18 +53,18 @@ if ticker and stock_name2 is not None:
     end = datetime.now()
     start = datetime(end.year - 1, end.month, end.day)
     #comp_list= ['AAPL','DJIA']
-    for stock in ['AAPL','DJIA']:
-        d=3
-        d
-        stock
-        globals()[stock] = yf.download(stock, start, end)
+    #for stock in ['AAPL','DJIA']:
+    #    d=3
+    #    d
+    #    stock
+        globals()[ticker] = yf.download(stock, start, end)
     
         
     company_list = [eval(x) for x in ['AAPL','DJIA']]
     e=5
     e
     company_list
-    company_name = comp_list1
+    company_name = comp_list
     f=6
     f
     company_name
