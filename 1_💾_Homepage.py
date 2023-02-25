@@ -9,7 +9,8 @@ import yfinance as yf
 from plotly import graph_objs as go 
 from statsmodels.tsa.seasonal import seasonal_decompose
 from statsmodels.tsa.filters.hp_filter import hpfilter 
-
+from pandas_datareader import data as pdr
+yf.pdr_override()
 
 sidebar_flag = None
 sidebar_flag2 = None 
@@ -20,7 +21,7 @@ st.set_page_config(
 st.title('Stock Forecasting')
 # setting up structure to retrive data
 ticker=""
-ticker = st.sidebar.text_input(st.session_state['Ticker'])
+ticker = st.sidebar.text_input('Ticker')
 comp_list = []  # Create an empty list for the companies
 a=1
 comp_list
@@ -34,7 +35,7 @@ comp_list
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
 stock_name2=""
-stock_name2 = st.sidebar.text_input(st.session_state['Ticker2'])
+stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list.append(stock_name2) 
 
 b=2
