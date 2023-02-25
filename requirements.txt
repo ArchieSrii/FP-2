@@ -10,3 +10,5 @@ yfinance==0.1.74
 Keras==2.6.0
 numpy==1.19.5
 tensorflow==3.7.4
+typing-extensions~=3.7.4
+streamlit==0.88.0
