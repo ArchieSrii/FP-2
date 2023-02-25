@@ -23,14 +23,14 @@ st.title('Stock Forecasting')
 #ticker=""
 ticker = st.sidebar.text_input('Ticker')
 comp_list = []  # Create an empty list for the companies
-a=1
-comp_list
-comp_list.append(ticker)
+#a=1
+#comp_list
+#comp_list.append(ticker)
 
 
-a=1
-a
-comp_list
+#a=1
+3a
+#comp_list
 
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
@@ -38,9 +38,6 @@ comp_list
 stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list.append(stock_name2) 
 
-b=2
-b
-comp_list
 #aded for checking
 #comp_list
 
@@ -49,15 +46,16 @@ comp_list
 
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
-daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
-j=10
-j
-daf
+#daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
+#j=10
+#j
+#daf
 if ticker and stock_name2 is not None:
     # Extracting data
-    end = '2023-02-24'
-    #start = datetime(end.year - 1, end.month, end.day)
-    start= '2022-02-24'
+    #end = '2023-02-24'
+    end = datetime.now()
+    start = datetime(end.year - 1, end.month, end.day)
+    #start= '2022-02-24'
     #comp_list= ['AAPL','DJIA']
     for stock in comp_list:
     #    d=3
@@ -67,13 +65,10 @@ if ticker and stock_name2 is not None:
     #globals()['AAPL'] = yf.download('AAPL', start, end)
     #daf= globals()['AAPL'] = yf.download('AAPL', start, end)
     #daf
-    daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
-    daf
+    #daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
+    #daf
         
     company_list = [eval(x) for x in ['AAPL','DJIA']]
-    e=5
-    e
-    company_list
     company_name = comp_list
     f=6
     f
