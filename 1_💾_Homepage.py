@@ -36,21 +36,19 @@ stock_name2=""
 stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list1.append(stock_name2) 
 
-#comp_list = [eval(x) for x in comp_list1]
-c=3
-c
-#comp_list
-
+b=2
+b
+comp_list1
 #aded for checking
 #comp_list
-sidebar_flag = ticker 
-sidebar_flag2  = stock_name2
+
 
 my_list = list(comp_list1.values())
 d=4
 d
 my_list
-
+sidebar_flag = ticker 
+sidebar_flag2  = stock_name2
 if ticker and stock_name2 is not None:
     # Extracting data
     end = datetime.now()
