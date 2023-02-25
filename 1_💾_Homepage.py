@@ -21,27 +21,35 @@ st.title('Stock Forecasting')
 # setting up structure to retrive data
 ticker=""
 ticker = st.sidebar.text_input('Ticker')
-comp_list = []  # Create an empty list for the companies
+comp_list1 = []  # Create an empty list for the companies
 a=1
-comp_list
-comp_list.append(ticker)
+comp_list1
+comp_list1.append(ticker)
+
 a=1
 a
-comp_list
+comp_list1
 
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
 stock_name2=""
 stock_name2 = st.sidebar.text_input('Ticker2')
-comp_list.append(stock_name2) 
-b=2
-b
+comp_list1.append(stock_name2) 
+
+comp_list = [eval(x) for x in comp_list1]
+c=3
+c
 comp_list
 
 #aded for checking
 #comp_list
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
+
+my_list = list(comp_list1.values())
+d=4
+d
+my_list
 
 if ticker and stock_name2 is not None:
     # Extracting data
