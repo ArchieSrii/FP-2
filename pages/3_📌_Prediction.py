@@ -179,5 +179,5 @@ while(i<30):
 #Creating final data for plotting
 Next_30days_forecast = scaler.inverse_transform(lst_output).tolist()
 Next_30days_forecast=pd.DataFrame(Next_30days_forecast, columns=['30 Days Forecast'])
-    st.write(Next_30days_forecast.head(30)) 
+st.write(Next_30days_forecast.head(30)) 
 
