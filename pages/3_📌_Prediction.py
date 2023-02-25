@@ -9,7 +9,7 @@ from pandas_datareader import data as pdr
 from keras.models import Sequential
 from keras.layers import Dense, LSTM
 yf.pdr_override()
-
+import tensorflow as tf
 from datetime import datetime
 from sklearn.preprocessing import MinMaxScaler
 from plotly import graph_objs as go 
