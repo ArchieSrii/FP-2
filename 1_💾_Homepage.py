@@ -29,7 +29,7 @@ comp_list = []  # Create an empty list for the companies
 
 
 #a=1
-3a
+#3a
 #comp_list
 
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
