@@ -21,24 +21,24 @@ st.title('Stock Forecasting')
 # setting up structure to retrive data
 ticker=""
 ticker = st.sidebar.text_input('Ticker')
-comp_list1 = []  # Create an empty list for the companies
+comp_list = []  # Create an empty list for the companies
 a=1
-comp_list1
-comp_list1.append(ticker)
+comp_list
+comp_list.append(ticker)
 
 a=1
 a
-comp_list1
+comp_list
 
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
 stock_name2=""
 stock_name2 = st.sidebar.text_input('Ticker2')
-comp_list1.append(stock_name2) 
+comp_list.append(stock_name2) 
 
 b=2
 b
-comp_list1
+comp_list
 #aded for checking
 #comp_list
 
