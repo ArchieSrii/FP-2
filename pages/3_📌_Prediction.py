@@ -15,7 +15,7 @@ from sklearn.preprocessing import MinMaxScaler
 from plotly import graph_objs as go 
 import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
-st. set_page_config(layout="wide")
+
 st.title('Stock Forecast')
 # setting up structure to retrive data
 ticker = st.sidebar.text_input('Ticker')
