@@ -18,7 +18,7 @@ sidebar_flag2 = None
 
 
 st.set_page_config(
-    page_title='Stock Forecasting'
+    page_title='Stock Forecasting',
     layout="wide"
 )
 st.title('Stock Forecasting')
