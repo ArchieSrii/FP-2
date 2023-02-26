@@ -78,7 +78,8 @@ if ticker and stock_name2 is not None:
     def plot_ticker():
         st.subheader(f'{ticker} Close')
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x = df.Date,y = stock_close['Close'],name = f'{ticker} Close'))
+        #fig.add_trace(go.Scatter(x = df.Date,y = stock_close['Close'],name = f'{ticker} Close'))
+        fig.add_trace(go.Scatter(x = df.Date,y = stock_close['Close']))
         fig.layout.update(title_text = f'{ticker} Latest Year Close',xaxis_rangeslider_visible=True)
         st.plotly_chart(fig)
     plot_ticker() 
@@ -89,7 +90,9 @@ if ticker and stock_name2 is not None:
     def plot_index():
         st.subheader(f'{stock_name2} Close')
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'],name = f'{stock_name2} Close'))
+        #fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'],name = f'{stock_name2} Close'))
+        fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close']))
+                      
         fig.layout.update(title_text = f'{stock_name2} Latest Year Close',xaxis_rangeslider_visible=True)
         st.plotly_chart(fig)
     plot_index()
