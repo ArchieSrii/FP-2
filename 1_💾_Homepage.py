@@ -31,9 +31,7 @@ comp_list = []  # Create an empty list for the companies
 comp_list.append(ticker)
 
 
-#a=1
-#3a
-#comp_list
+
 
 # ticker2 = st.sidebar.text_input('Second Ticker (ideally broader market index)')
 # stock_name2 = 'DJIA'
@@ -41,18 +39,12 @@ comp_list.append(ticker)
 stock_name2 = st.sidebar.text_input('Ticker2')
 comp_list.append(stock_name2) 
 
-#aded for checking
-#comp_list
 
 
 
 
 sidebar_flag = ticker 
 sidebar_flag2  = stock_name2
-#daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
-#j=10
-#j
-#daf
 if ticker and stock_name2 is not None:
     # Extracting data
     #end = '2023-02-24'
@@ -61,35 +53,24 @@ if ticker and stock_name2 is not None:
     #start= '2022-02-24'
     #comp_list= ['AAPL','DJIA']
     for stock in comp_list:
-    #    d=3
-    #    d
-    #    stock
         globals()[stock] = yf.download(stock, start, end)
-    #globals()['AAPL'] = yf.download('AAPL', start, end)
-    #daf= globals()['AAPL'] = yf.download('AAPL', start, end)
-    #daf
-    #daf=yf.Ticker('tsla').history(period='1d',start='2012-05-30', end='2023-02-20')
-    #daf
         
     #company_list = [eval(x) for x in ['AAPL','DJIA']]
     company_list = [eval(x) for x in comp_list]
     company_name = comp_list
-    #company_name = comp_list
-    #f=6
-    #f
-    #company_name
-    #["Company1", "DJIA"]
     
 
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
     df = pd.concat(company_list, axis=0) 
     #checking df
-    df
+    
+    #df.head(10)
     df=df.reset_index()
     df["Date"] = pd.to_datetime(df["Date"], format='%Y-%m-%d').dt.date
-    st.dataframe(df[df['company_name'] == ticker].tail(10))  
     st.subheader(f'{ticker} and {stock_name2} Data')
+    st.dataframe(df[df['company_name'] == ticker].tail(10))  
+    
    
 
     # Stock Close Chart
