@@ -97,6 +97,7 @@ if ticker and stock_name2 is not None:
     # Moving Averages Charts
 
     def ticker_ma():
+        st.subheader(f'{ticker} Moving Average')
         fig = go.Figure()
         fig.add_trace(go.Scatter(x = df.Date,y = stock_close['Close'].rolling(10).mean(),name = f'{ticker} 10 day Moving Average'))
         fig.add_trace(go.Scatter(x = df.Date,y = stock_close['Close'].rolling(20).mean(),name = f'{ticker} 20 day Moving Average'))
@@ -110,6 +111,7 @@ if ticker and stock_name2 is not None:
 
     def ticker2_ma():
         fig = go.Figure()
+        st.subheader(f'{stock_name2} Moving Average')
         fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'].rolling(10).mean(),name = f'{stock_name2} 10 day Moving Average'))
         fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'].rolling(20).mean(),name = f'{stock_name2} 20 day Moving Average'))
         fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'].rolling(50).mean(),name = f'{stock_name2} 50 day Moving Average'))
