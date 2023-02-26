@@ -83,8 +83,10 @@ if ticker and stock_name2 is not None:
     plot_ticker() 
 
     # Index Close Chart
+    
     index_close = df[df['company_name'] == stock_name2]
     def plot_index():
+        st.subheader(f'{ticker} and {stock_name2} Data')
         fig = go.Figure()
         fig.add_trace(go.Scatter(x = df.Date,y = index_close['Close'],name = f'{stock_name2} Close'))
         fig.layout.update(title_text = f'{stock_name2} Latest Year Close',xaxis_rangeslider_visible=True)
