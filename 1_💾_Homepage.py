@@ -136,7 +136,7 @@ if ticker and stock_name2 is not None:
     def plot_decompose():
         decomp = seasonal_decompose(stock_close["Close"],period = int(len(stock_close)/6))  
         st.pyplot(decomp.plot(),use_container_width=True,x=None, y=None, width=0, height=0) 
-        plt.xticks(rotation=90)
+        st.plt.xticks(rotation=90)
         #st.line_chart(data=decomp.plot(), x=None, y=None, width=0, height=0, use_container_width=True)
         #st.pyplot()
     plot_decompose()
